@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Allow FileProvider to share files stored in:
+         /Android/data/<app-package>/files/Pictures/ -->
+
+    <!-- Name used inside the FileProvider URI -->
+    <!-- Subfolder inside app's external files directory -->
+
+    <external-files-path
+        name="my_images"
+        path="Pictures" />
+</paths>

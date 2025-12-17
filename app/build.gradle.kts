@@ -53,10 +53,5 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    // Firebase BOM
-    implementation(platform("com.google.firebase:firebase-bom:34.7.0"))
 
-    // Firebase libraries
-    implementation("com.google.firebase:firebase-firestore-ktx")
-    implementation("com.google.firebase:firebase-auth-ktx")
 }

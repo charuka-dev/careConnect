@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Header Section -->
+
+
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="301dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="416dp"
+        android:button="@null"
+        android:drawableStart="@drawable/radio_button_ice_blue"
+        android:drawablePadding="8dp"
+        android:text="🤝 I want to offer caregiving services"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/headerSection"
+        android:layout_width="0dp"
+        android:layout_height="257dp"
+        android:background="#DCF2F8"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="125dp"
+            android:layout_height="103dp"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/whatsapp_image_2025_10_12_at_20_59_49_e8fea1b6" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="372dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="30dp"
+            android:gravity="left"
+            android:text="Welcome back, caregiver! Let’s continue making a difference."
+            android:textColor="#2E8791"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="342dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="336dp"
+        android:fontFamily="@font/hind_regular"
+        android:text="How will CareConnect help you care?"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="376dp"
+        android:button="@null"
+        android:drawableStart="@drawable/radio_button_ice_blue"
+        android:drawablePadding="8dp"
+        android:text="🩺 I’m looking for caregiving services"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button3"
+        android:layout_width="354dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/button_background"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="Create Account"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:cornerRadius="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioButton2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

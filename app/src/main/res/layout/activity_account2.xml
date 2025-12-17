@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RadioButton
+        android:id="@+id/radioButton6"
+        android:layout_width="282dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="520dp"
+        android:button="@null"
+        android:drawableStart="@drawable/radio_button_ice_blue"
+        android:drawablePadding="8dp"
+        android:text="Elderly Caregiver"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/radioButton5"
+        android:layout_width="282dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="472dp"
+        android:button="@null"
+        android:drawableStart="@drawable/radio_button_ice_blue"
+        android:drawablePadding="8dp"
+        android:text="Child Caregiver"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/radioButton4"
+        android:layout_width="282dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="424dp"
+        android:button="@null"
+        android:drawableStart="@drawable/radio_button_ice_blue"
+        android:drawablePadding="8dp"
+        android:text="Housekeeping Caregiver"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="235dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="328dp"
+        android:fontFamily="@font/hind_regular"
+        android:text="Services"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="235dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="204dp"
+        android:fontFamily="@font/hind_regular"
+        android:text="@string/education_experienced"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:gravity="center"
+        android:text="Manage Your Services"
+        android:textColor="#2E8791"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- EditText field -->
+    <EditText
+        android:id="@+id/editTextTextEmailAddress7"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="248dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="how many years do you have experience "
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:paddingStart="50dp"
+        android:textColor="#FF000000"
+        android:textColorHint="#BDBDBD"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Attach File Button positioned inside left corner of EditText -->
+
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="289dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="376dp"
+        android:button="@null"
+        android:drawableStart="@drawable/radio_button_ice_blue"
+        android:drawablePadding="8dp"
+        android:text=" Personal Caregiver"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button3"
+        android:layout_width="354dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="612dp"
+        android:background="@drawable/button_background"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="Complete SetUp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:cornerRadius="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

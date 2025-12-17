@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="195dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="224dp"
+        android:background="@android:color/transparent"
+        android:text="upload Photo"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button5"
+        android:layout_width="354dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="416dp"
+        android:background="@drawable/button_background"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="Next"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:cornerRadius="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextEmailAddress" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress22"
+        android:layout_width="349dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="380dp"
+        android:background="@drawable/edit_text_bg"
+        android:drawablePadding="8dp"
+        android:hint=" Matara"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:paddingStart="40dp"
+        android:textColor="#FF000000"
+        android:textColorHint="#BDBDBD"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView4" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress21"
+        android:layout_width="349dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="276dp"
+        android:background="@drawable/edit_text_bg"
+        android:drawablePadding="8dp"
+        android:hint=" NIC"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:paddingStart="40dp"
+        android:textColor="#FF000000"
+        android:textColorHint="#BDBDBD"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView4" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress20"
+        android:layout_width="349dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/edit_text_bg"
+        android:drawablePadding="8dp"
+        android:hint=" YYYY/MM/DD"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:paddingStart="40dp"
+        android:textColor="#FF000000"
+        android:textColorHint="#BDBDBD"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView4" />
+
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="84dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="400dp"
+        android:button="@null"
+        android:drawableStart="@drawable/radio_button_ice_blue"
+        android:drawablePadding="8dp"
+        android:text="male"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress19"
+        android:layout_width="159dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/edit_text_bg"
+        android:drawablePadding="8dp"
+        android:hint=" "
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:paddingStart="40dp"
+        android:textColor="#FFFFFFFF"
+        android:textColorHint="#BDBDBD"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView4" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress17"
+        android:layout_width="159dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/edit_text_bg"
+        android:drawablePadding="8dp"
+        android:hint=""
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:paddingStart="40dp"
+        android:textColor="#FFFFFFFF"
+        android:textColorHint="#BDBDBD"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView4" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="235dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="636dp"
+        android:fontFamily="@font/hind_regular"
+        android:text="City"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="235dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="536dp"
+        android:fontFamily="@font/hind_regular"
+        android:text="ID Number"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="235dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="448dp"
+        android:fontFamily="@font/hind_regular"
+        android:text="Date of birthday"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="235dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="356dp"
+        android:fontFamily="@font/hind_regular"
+        android:text="Gender"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:gravity="center"
+        android:text="Manage Your Account"
+        android:textColor="#2E8791"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="110dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="116dp"
+        android:background="@drawable/circle_background"
+        android:padding="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_person2" />
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="235dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="268dp"
+        android:fontFamily="@font/hind_regular"
+        android:text="Phone number"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="349dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/edit_text_bg"
+        android:drawablePadding="8dp"
+        android:hint=" Enter your phone number"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:paddingStart="40dp"
+        android:textColor="#FF000000"
+        android:textColorHint="#BDBDBD"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView4" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="313dp" />
+
+
+    <RadioButton
+        android:id="@+id/radioButtonm"
+        android:layout_width="84dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="400dp"
+        android:button="@null"
+        android:drawableStart="@drawable/radio_button_ice_blue"
+        android:drawablePadding="8dp"
+        android:text="male"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/radioButtonf"
+        android:layout_width="97dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="404dp"
+        android:button="@null"
+        android:drawableStart="@drawable/radio_button_ice_blue"
+        android:drawablePadding="8dp"
+        android:text="Female"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="488dp"
+        android:background="@null"
+        android:contentDescription="Calendar Icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_calender" />
+
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="688dp"
+        android:background="@null"
+        android:contentDescription="Location Icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_location" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button3"
+        android:layout_width="354dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="416dp"
+        android:background="@drawable/button_background"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="Next"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:cornerRadius="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextEmailAddress" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

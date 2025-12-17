@@ -1,0 +1,21 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Checked state: fully solid -->
+    <item android:state_checked="true">
+        <shape android:shape="oval">
+            <solid android:color="#87DBF1" />
+            <stroke android:width="2dp" android:color="#87DBF1" />
+            <size android:width="16dp" android:height="16dp" />
+        </shape>
+    </item>
+
+    <!-- Unchecked state: outline only -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@android:color/transparent" />
+            <stroke android:width="2dp" android:color="#87DBF1" />
+            <size android:width="16dp" android:height="16dp" />
+        </shape>
+    </item>
+
+</selector>
