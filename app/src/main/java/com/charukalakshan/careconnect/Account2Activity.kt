@@ -108,7 +108,8 @@ class Account2Activity : AppCompatActivity() {
                 "city" to city,
                 "gender" to gender,
                 "education" to educationValue,
-                "service" to serviceValue
+                "service" to serviceValue,
+                "rating" to 0.0
             )
 
             // Save caregiver data using UID as key
@@ -123,12 +124,15 @@ class Account2Activity : AppCompatActivity() {
                         Toast.LENGTH_SHORT
                     ).show()
 
-                    // Navigate to Home screen
-                    startActivity(Intent(this, ActivityHome::class.java))
+                    // mark as caregiver in User node
+                    FirebaseDatabase.getInstance().getReference("User").child(uid).child("role").setValue(0)
 
-                    // Close Account2Activity
+                    // Navigate to Caregiver Home and clear back stack
+                    startActivity(Intent(this, CaregiverHomeActivity::class.java).apply {
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    })
                     finish()
-                }
+                 }
                 .addOnFailureListener { e ->
 
                     // Show error message

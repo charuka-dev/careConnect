@@ -44,16 +44,20 @@
                 android:resource="@xml/file_paths"/>
         </provider>
 
-        <!-- Main screen -->
+        <!-- Splash screen as launcher -->
 
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
@@ -82,14 +86,40 @@
             android:exported="false" />
 
         <activity
-            android:name=".ActivityHome"
+            android:name=".ActivityUserHome"
             android:exported="false" />
 
+        <activity
+            android:name=".CaregiverHomeActivity"
+            android:exported="true" />
 
+        <activity
+            android:name=".UsersideCaregiverProfileActivity"
+            android:exported="true" />
 
+        <activity
+            android:name=".SendRequestActivity"
+            android:exported="true" />
 
+        <activity
+            android:name=".RequestSendActivity"
+            android:exported="true" />
 
+        <activity
+            android:name=".BookingsActivity"
+            android:exported="true" />
 
+        <activity
+            android:name=".UserMyProfileActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".SettleMoneyActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".UMessageActivity"
+            android:exported="true" />
 
     </application>
 

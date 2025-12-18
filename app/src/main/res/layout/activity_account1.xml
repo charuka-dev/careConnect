@@ -306,7 +306,7 @@
         android:contentDescription="Calendar Icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_calender" />
+        app:srcCompat="@drawable/ic_calendar" />
 
 
     <ImageButton

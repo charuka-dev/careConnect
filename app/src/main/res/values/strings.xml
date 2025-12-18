@@ -3,4 +3,23 @@
     <string name="confirm_continue"><![CDATA[Confirm & Continue]]></string>
     <string name="id_number">ID Number</string>
     <string name="education_experienced"><![CDATA[Experienced]]></string>
+
+    <!-- Added strings for UserHome -->
+    <string name="careconnect_title">CareConnect</string>
+    <string name="search_hint">Search</string>
+    <string name="no_details">No details</string>
+    <string name="view_details">View Details</string>
+    <string name="no_caregivers">No caregivers found</string>
+
+    <!-- Profile strings -->
+    <string name="hourly_rate">$25/hour</string>
+    <string name="experience_and_city">%1$s • %2$s</string>
+    <string name="caregiver_description">%1$s is experienced in %2$s.</string>
+
+    <!-- Navigation strings -->
+    <string name="back">Back</string>
+    <string name="accepted_label">Accepted</string>
+    <string name="pending_label">Pending</string>
+    <string name="unknown_label">Unknown</string>
+    <string name="loading_label">Loading...</string>
 </resources>

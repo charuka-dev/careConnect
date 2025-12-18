@@ -162,8 +162,40 @@ class LoginActivity : AppCompatActivity() {
 
                     // Check if user exists in database
                     if (userId != null) {
-                        checkUserInDatabase(userId)
-                    }
+                        // Determine role and route accordingly.
+                        val userRef = FirebaseDatabase.getInstance().getReference("User").child(userId)
+                        userRef.addListenerForSingleValueEvent(object : ValueEventListener {
+                            override fun onDataChange(snapshotUser: DataSnapshot) {
+                                // read role flexibly (could be stored as Long, Int, or String)
+                                val roleNode = snapshotUser.child("role").value
+                                val roleVal = when (roleNode) {
+                                    is Long -> roleNode.toInt()
+                                    is Int -> roleNode
+                                    is String -> roleNode.toIntOrNull()
+                                    else -> null
+                                }
+
+                                if (roleVal != null) {
+                                    // role explicitly set: 1 => customer, 0 => caregiver
+                                    if (roleVal == 1) {
+                                        startActivity(Intent(this@LoginActivity, ActivityUserHome::class.java))
+                                        finish()
+                                    } else {
+                                        startActivity(Intent(this@LoginActivity, CaregiverHomeActivity::class.java))
+                                        finish()
+                                    }
+                                } else {
+                                    // role not set; check Caregiver node first, then customers
+                                    checkCaregiverThenCustomers(userId, userRef)
+                                }
+                             }
+
+                             override fun onCancelled(error: DatabaseError) {
+                                 // fallback
+                                 checkUserInDatabase(userId)
+                             }
+                         })
+                     }
 
                 } else {
                     // Login failed
@@ -174,6 +206,65 @@ class LoginActivity : AppCompatActivity() {
                     ).show()
                 }
             }
+    }
+
+    // helper: check caregiver node, then customers node, write role back to User/{uid}/role
+    private fun checkCaregiverThenCustomers(userId: String, userRef: DatabaseReference) {
+        val caregiverRef = FirebaseDatabase.getInstance().getReference("Caregiver").child(userId)
+        caregiverRef.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(cgSnap: DataSnapshot) {
+                if (cgSnap.exists()) {
+                    // user is a caregiver
+                    userRef.child("role").setValue(0)
+                    startActivity(Intent(this@LoginActivity, CaregiverHomeActivity::class.java))
+                    finish()
+                } else {
+                    // not found under caregiver; check customers node
+                    val customersRef = FirebaseDatabase.getInstance().getReference("customers")
+                    customersRef.orderByChild("userId").equalTo(userId)
+                        .addListenerForSingleValueEvent(object : ValueEventListener {
+                            override fun onDataChange(snapshot: DataSnapshot) {
+                                if (snapshot.exists()) {
+                                    // user is a customer
+                                    userRef.child("role").setValue(1)
+                                    startActivity(Intent(this@LoginActivity, ActivityUserHome::class.java))
+                                    finish()
+                                } else {
+                                    // fallback: if there's a User entry, route to user home; else sign out
+                                    userRef.addListenerForSingleValueEvent(object : ValueEventListener {
+                                        override fun onDataChange(uSnap: DataSnapshot) {
+                                            if (uSnap.exists()) {
+                                                userRef.child("role").setValue(1)
+                                                startActivity(Intent(this@LoginActivity, ActivityUserHome::class.java))
+                                                finish()
+                                            } else {
+                                                Toast.makeText(this@LoginActivity, "User record not found", Toast.LENGTH_SHORT).show()
+                                                FirebaseAuth.getInstance().signOut()
+                                            }
+                                        }
+
+                                        override fun onCancelled(error: DatabaseError) {
+                                            Toast.makeText(this@LoginActivity, "DB error", Toast.LENGTH_SHORT).show()
+                                        }
+                                    })
+                                }
+                            }
+
+                            override fun onCancelled(error: DatabaseError) {
+                                // fallback
+                                startActivity(Intent(this@LoginActivity, ActivityUserHome::class.java))
+                                finish()
+                            }
+                        })
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                // fallback
+                startActivity(Intent(this@LoginActivity, ActivityUserHome::class.java))
+                finish()
+            }
+        })
     }
 
     // Function to verify user data exists in Realtime Database
@@ -197,7 +288,7 @@ class LoginActivity : AppCompatActivity() {
 
                         // Navigate to Home Activity
                         startActivity(
-                            Intent(this@LoginActivity, ActivityHome::class.java)
+                            Intent(this@LoginActivity, ActivityUserHome::class.java)
                         )
 
                         // Close LoginActivity

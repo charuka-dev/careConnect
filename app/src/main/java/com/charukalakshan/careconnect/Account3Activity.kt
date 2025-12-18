@@ -7,7 +7,6 @@ import android.content.ContentValues
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.*
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
@@ -24,6 +23,7 @@ import com.google.android.material.snackbar.Snackbar
 
 // Firebase Realtime Database
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.auth.FirebaseAuth
 
 // Used to convert Bitmap to Base64
 import java.io.ByteArrayOutputStream
@@ -278,13 +278,18 @@ class Account3Activity : AppCompatActivity() {
         // Convert image to Base64
         val imageBase64 = bitmapImage?.let { bitmapToBase64(it) } ?: ""
 
+        // Get current user
+        val currentUser = FirebaseAuth.getInstance().currentUser
+
         // Create customer object
         val customer = CustomerFirebase(
             phone = phone,
             dob = dob,
             city = city,
             gender = gender,
-            imageBase64 = imageBase64
+            imageBase64 = imageBase64,
+            userId = currentUser?.uid ?: "",
+            email = currentUser?.email ?: ""
         )
 
         // Save data to Firebase
@@ -298,9 +303,15 @@ class Account3Activity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
 
+                // Set role flag on the User node: 1 => customer
+                val uid = currentUser?.uid
+                if (!uid.isNullOrEmpty()) {
+                    FirebaseDatabase.getInstance().getReference("User").child(uid).child("role").setValue(1)
+                }
+
                 // Go to Home screen and clear back stack
                 startActivity(
-                    Intent(this, ActivityHome::class.java).apply {
+                    Intent(this, ActivityUserHome::class.java).apply {
                         flags =
                             Intent.FLAG_ACTIVITY_NEW_TASK or
                                     Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -318,6 +329,8 @@ class Account3Activity : AppCompatActivity() {
         val dob: String = "",
         val city: String = "",
         val gender: String = "",
-        val imageBase64: String = ""
+        val imageBase64: String = "",
+        val userId: String = "",
+        val email: String = ""
     )
 }
